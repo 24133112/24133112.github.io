@@ -1,0 +1,475 @@
+@charset "utf-8";
+
+/* サイト全般・共通 */
+body {
+    font-family: "Kosugi Maru", sans-serif;
+    color: #1C261A;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #004D40;
+    color: #C5A059;
+    padding: 10px 0;
+}
+
+/* ロゴ画像を左に */
+.header-logo {
+    float: left;
+    margin-left: 20px;
+}
+
+h1 {
+    color: #C5A059;
+    background-color: #004D40;
+    padding: 20px;
+    margin: 0;
+}
+
+/* h2後ろに丸みのある四角 */
+h2 {
+    background-color: #78cf849e; 
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #004D40;
+    color: #C5A059;
+    padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    clear: both;
+}
+
+/* 共通コンテナ・装飾用汎用クラス */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.subhead {
+    background-color: #C5A059;
+    color: #004D40;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px #FFF;
+}
+
+article h1 {
+    background-color: #C5A059;
+}
+
+.intro-text {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.single-box {
+    color: #1C261A;
+    background-color: #F7F4EB;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); 
+    box-sizing: border-box; 
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.red {
+    color: #8B261A;
+    font-weight: bold;
+}
+
+.kosugi-maru-regular {
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* 共通 */
+/* ロゴの横に並べる */
+.main-nav {
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #C5A059;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.main-nav li {
+    display: inline-block;
+    padding: 0; 
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-nav a {
+    display: block;
+    padding: 12px 24px;
+    color: #00332c;
+    text-decoration: none;
+}
+
+/* ナビゲーションマウスホバー時 */
+.main-nav a:hover {
+    background-color: #00332c;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+/* 全体リンクの擬似クラス */
+a:link {
+    color: #004D40;
+    text-decoration: underline; 
+}
+a:visited {
+    color: #00796B;
+}
+a:hover {
+    color: #D32F2F;
+    text-decoration: none; 
+}
+a:active {
+    color: #FF5722;
+}
+
+/* フッターリンク */
+.validator-links {
+    margin: 5px 0;
+    font-size: 0.85rem;
+}
+footer a:link {
+    color: #FFF;
+}
+footer a:visited {
+    color: #C5A059;
+}
+footer a:hover {
+    color: #FF5722;
+}
+footer a:active {
+    color: #FFF;
+}
+
+
+/* index.html（トップページ） */
+/* トップページ用の背景 */
+.idx-bg {
+    background: #78cf849e url('../image/bg-pattern.jpg') repeat; 
+}
+
+/* 3カラムボックス */
+.box-gaiyou, .box-ryouri, .box-nissi {
+    color: #1C261A;
+    background-color: #F7F4EB;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); 
+    box-sizing: border-box; 
+    float: left;
+    width: 31.33%;
+    margin: 20px 1%;
+    height: 520px;
+    overflow: hidden;
+}
+
+.ranking-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin: 0 0 10px 0;
+}
+
+
+/* contents1.html（概要） */
+/* サブページ用の背景グラデーション */
+.content-bg {
+    background: linear-gradient(135deg, #ffd972 0%, #f7f4eb 100%);
+}
+
+/* サブページ共通パンくずリスト */
+.breadcrumb {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    clear: both;
+}
+.breadcrumb li {
+    display: inline;
+}
+.breadcrumb li+li:before {
+    content: " > "; 
+    color: #666;
+    padding: 0 5px;
+}
+
+/* 先頭へ戻る */
+.page-toc {
+    background-color: #e9e5da;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.page-toc ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+.page-toc li {
+    margin-bottom: 8px;
+}
+.section-padding {
+    padding: 40px 0; 
+    border-bottom: 1px solid #ddd;
+}
+.back-to-top {
+    text-align: right;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+/* キャラクター紹介画像用の設定 */
+.chara-image-wrap {
+    text-align: center;
+    margin: 20px 0;
+}
+.chara-img {
+    max-width: 666px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+}
+
+
+/* contents2.html（料理） */
+/* 料理メニュー一覧用CSS */
+.food-menu-list {
+    padding-left: 0;  
+    list-style: none; 
+    list-style-image: url('../image/icon.png'); 
+}
+.food-menu-list li {
+    display: block;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* 商品写真 */
+.menu-photo {
+    width: 600px; 
+    height: 450px; 
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+/* 商品名（肉まんアイコン付き） */
+.menu-name {
+    font-size: 1.1rem; 
+    color: #004D40;
+    margin-bottom: 6px; 
+    display: inline-flex;
+    align-items: center;
+}
+.menu-name::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../image/icon.png') no-repeat center/contain;
+    margin-right: 8px;
+}
+
+/* 商品説明 */
+.menu-desc {
+    font-size: 0.95rem;
+    color: #1C261A;
+    line-height: 1.4;
+}
+
+/* 料理紹介画像の左回り込み設定 */
+.menu-item-float {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-bottom: 1px dashed #004D40;
+}
+.float-img-left {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+
+/* contents3.html（日誌） */
+/* 日記用初期化 */
+.news-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 30px 0 10px 0;
+}
+
+/* 横並び */
+.sns-post {
+    background-color: #FFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex; 
+    align-items: flex-start;
+}
+
+/* スクエア画像 */
+.sns-img {
+    width: 100px;         
+    height: 100px;        
+    object-fit: cover;    
+    border-radius: 8px;   
+    margin-right: 20px;   
+    flex-shrink: 0;       
+}
+
+/* 文章エリア */
+.sns-content {
+    flex-grow: 1;
+}
+
+/* 日誌用のカスタムアイコンリスト（仮） */
+.custom-icon-list {
+    list-style-image: url('../image/icon2.png'); 
+    padding-left: 30px;
+    margin: 0 0 10px 0;
+}
+
+/* 投稿日時 */
+.news-list time {
+    display: inline-block;
+    color: #666;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    border-bottom: 2px solid #78cf849e;
+    padding-bottom: 2px;
+}
+
+/* 投稿テキスト */
+.sns-text {
+    margin: 0;
+    font-size: 1rem;
+    color: #1C261A;
+}
+
+
+/* contents4.html（お問い合わせ） */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #004D40;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-family: "Kosugi Maru", sans-serif;
+    border: 1px solid #C5A059;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.submit-btn {
+    background-color: #004D40;
+    color: #C5A059;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-family: "Kosugi Maru", sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    font-weight: bold;
+}
+.submit-btn:hover {
+    background-color: #C5A059;
+    color: #004D40;
+}
+
+
+/* タブレット・スマートフォン画面時 */
+@media (max-width: 960px) {
+    .header-logo {
+        float: none;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .main-nav {
+        float: none;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .box-gaiyou, .box-ryouri, .box-nissi {
+        float: none;
+        width: 96%;
+        margin: 15px auto;
+        height: auto;
+    }
+}
+
+/* 日誌ページ：スマホ画面時（幅500px以下）のSNS投稿カード調整 */
+@media (max-width: 500px) {
+    .sns-post {
+        flex-direction: column; 
+    }
+    .sns-img {
+        margin-right: 0;
+        margin-bottom: 12px;
+        width: 100%;       
+        height: 200px;
+    }
+}
+
+
+/* 印刷時 */
+@media print {
+    header, nav, .breadcrumb, footer, .back-to-top, .page-toc {
+        display: none;
+    }
+    body {
+        color: #000;
+        background: #fff;
+    }
+    a {
+        text-decoration: underline;
+    }
+}
