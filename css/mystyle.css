@@ -205,10 +205,19 @@ footer a:active {
 
 
 /* contents1.html（概要） */
-/* サブページ用の背景グラデーション */
+
+/* サブページ用の背景 */
+.content-bg {
+    background-image: url('../image/subBG.jpg'); 
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    background-color: #78cf849e;
+}
+/* サブページ用の背景グラデーション
 .content-bg {
     background: linear-gradient(135deg, #ffd972 0%, #f7f4eb 100%);
 }
+*/
 
 /* サブページ共通パンくずリスト */
 .breadcrumb {
